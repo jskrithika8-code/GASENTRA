@@ -1,4 +1,4 @@
-###GASENTRA
+### GASENTRA
 
 **An action firewall for AI agents.**GASENTRA sits between an AI bot and the tools it uses. The bot suggests an action and a set of fixed rules decides what happens: let it run, hold it for a human to approve, or block it. You don't have to change the AI model to use it.
 
@@ -7,7 +7,7 @@
 
 AI assistants now read emails and documents, open private files and send messages for us. The trouble is that they can't reliably tell what the user asked for from instructions hidden inside the content they read. If an assistant gets hijacked, it can leak private data and nobody notices.
 
-##What it does
+## What it does
 
 - **Labels data.** Every tool result is stored with a sensitivity label.
 - **Tracks taint.** Once the bot has seen sensitive data, everything it does for the rest of the conversation is treated as tainted.
@@ -16,11 +16,11 @@ AI assistants now read emails and documents, open private files and send message
 - **Protects fields** like salary. A change goes through only if the new value came from the user's own words.
 - **Freezes sessions** after repeated denials and logs every decision.
 
-##A quick example
+## A quick example
 
 Company Z emails Company X's HR team a fake "verification request" with a hidden instruction inside. X's assistant opens a candidate's record and tries to email it to Z. GASENTRA notices two things: the address came only from untrusted content and the session is already tainted. So the send is blocked or held and the decision goes into the log.
 
-##How it works
+## How it works
 
 1. The host app passes the user's messages to the gateway.
 2. The bot proposes a tool call and the gateway sorts it by type.
@@ -31,7 +31,7 @@ Company Z emails Company X's HR team a fake "verification request" with a hidden
 
 When rules conflict, the order is: errors first, then blocks, then holds, then allows.
 
-##Where we are
+## Where we are
 
 | Part | Status |
 | --- | --- |
@@ -40,26 +40,26 @@ When rules conflict, the order is: errors first, then blocks, then holds, then a
 | Dashboard (approvals, audit log, frozen sessions, results) | Planned |
 
 
-##Planned layout
+## Planned layout
 
 `gateway/` `ledger/` `policy/` `tools/` `agent/` `harness/` `frontend/` `data/`
 
-##Tech
+## Tech
 
 Python, a lightweight web API (FastAPI, for example), a small database (such as SQLite), a web dashboard (such as React) .
 
-##What's next
+## What's next
 
 A connector mode for assistants that accept custom connectors and checks on messages passed between agents.
 
-##References
+## References
 
 Abdelnabi et al. (arXiv:2502.01822) 
 Lan and Kaul (arXiv:2603.23791)
 Wutschitz et al. (arXiv:2505.23643) 
 CERT-In advisory CIAD-2026-0049.
 
-Team  SOLARIS YAZHI
+## Team  SOLARIS YAZHI
 
 PREETHI S
 
