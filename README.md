@@ -54,9 +54,12 @@ A connector mode for assistants that accept custom connectors and checks on mess
 
 ## References
 
-Abdelnabi et al. (arXiv:2502.01822) 
+Abdelnabi et al. (arXiv:2502.01822)
+
 Lan and Kaul (arXiv:2603.23791)
+
 Wutschitz et al. (arXiv:2505.23643) 
+
 CERT-In advisory CIAD-2026-0049.
 
 ## Team  SOLARIS YAZHI
